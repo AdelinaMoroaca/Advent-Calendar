@@ -99,3 +99,22 @@ body{
     position: relative;
     cursor: pointer;
 }
+
+.calendar .calendar-page .pins {
+    position: absolute;
+    top: 8px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 8px;
+}
+
+.calendar .calendar-page .pins::after,
+.calendar .calendar-page .pins::before {
+    content: '';
+    display: block;
+    width: 8px;
+    aspect-ratio: 1;
+    background: var(--black);
+    border-radius: 50%;
+}
