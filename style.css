@@ -98,6 +98,8 @@ body{
     grid-template-rows: 1fr;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
+    border: 0;
 }
 
 .calendar .calendar-page .pins {
@@ -117,4 +119,44 @@ body{
     aspect-ratio: 1;
     background: var(--black);
     border-radius: 50%;
+}
+
+.calendar .calendar-page.variant-1 {
+    color: var(--white);
+    background: var(--accent1-dark);
+    box-shadow: 0px 2px 2px 0px var(--accent1-dark);
+}
+
+.calendar .calendar-page.variant-1 .day{
+    grid-column: 1/1;
+    grid-row: 1/1;
+    text-shadow: var(--accent1-dark) 1px 1px 1px;
+    box-shadow: 0px 2px 2px 0px var(--accent1-dark);
+    padding-top: 2px;
+}
+
+.calendar .calendar-page.variant-1 .shine {
+    display: block;
+    height: 85%;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    background: linear-gradient(
+        to bottom,
+        var(--accent1-lighter) 0%,
+        var(--accent1-light) 8%,
+        var(--accent1) 100%
+    );
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+}
+
+.calendar .calendar-page .pins::after,
+.calendar .calendar-page .pins::before {
+    background: radial-gradient(
+        var(--white) 0%,
+        var(--accent1-lighter) 70%,
+        var(--accent1-dark) 100%
+    );
+    box-shadow: 0px 2px 2px 0px var(--accent1-dark);
 }
