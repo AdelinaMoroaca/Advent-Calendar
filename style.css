@@ -15,6 +15,10 @@
     --accent1:#ff1b26;
     --accent1-dark:#940008;
 
+    --accent2-lighter:#72f5e2;
+    --accent2-light:#099c88;
+    --accent2: var(--bg);
+    --accent2-dark: #00343f;
 }
 
 body{
@@ -159,4 +163,44 @@ body{
         var(--accent1-dark) 100%
     );
     box-shadow: 0px 2px 2px 0px var(--accent1-dark);
+}
+
+.calendar .calendar-page.variant-2 {
+    color: var(--white);
+    background: var(--accent2-dark);
+    box-shadow: 0px 2px 2px 0px var(--accent2-dark);
+}
+
+.calendar .calendar-page.variant-2 .day{
+    grid-column: 1/1;
+    grid-row: 1/1;
+    text-shadow: var(--accent2-dark) 1px 1px 1px;
+    box-shadow: 0px 2px 2px 0px var(--accent2-dark);
+    padding-top: 2px;
+}
+
+.calendar .calendar-page.variant-2 .shine {
+    display: block;
+    height: 85%;
+    grid-column: 1/1;
+    grid-row: 1/1;
+    background: linear-gradient(
+        to bottom,
+        var(--accent2-lighter) 0%,
+        var(--accent2-light) 8%,
+        var(--accent2) 100%
+    );
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+}
+
+.calendar .calendar-page .pins::after,
+.calendar .calendar-page .pins::before {
+    background: radial-gradient(
+        var(--accent1-lighter) 0%,
+        var(--accent1-light) 8%,
+        var(--accent1) 100%
+    );
+    box-shadow: 0px 2px 2px 0px var(--accent2-dark);
 }
