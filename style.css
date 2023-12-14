@@ -1,3 +1,12 @@
+.header .container{
+    border: 2px solid red;
+}
+
+.content .container .calendar {
+    border: 2px solid yellow;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -50,7 +59,7 @@ body{
     grid-column: 1 / 1;
     grid-row: 1 / 1;
 }
-
+ 
 .header h1 a{
     text-decoration: none;
     color: var(--dark);
@@ -80,6 +89,7 @@ body{
     place-self: center right;
 }
 
+/*
 .content {
     margin-top: 32px;
 }
@@ -105,8 +115,8 @@ body{
     cursor: pointer;
     overflow: hidden;
     border: 0;
-}
-
+} */ 
+/* 
 .calendar .calendar-page .pins {
     position: absolute;
     top: 8px;
@@ -246,4 +256,4 @@ body{
 
 .calendar .calendar-page.done .day {
     opacity: 0;
-}
+} */
