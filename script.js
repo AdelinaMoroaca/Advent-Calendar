@@ -5,6 +5,7 @@ const today = date.getDate();
 const dayBadge = document.querySelector('.header .badge');
 dayBadge.innerText = today;
 
+// day calendar iteration
 function createDays( limit = xmas){
     const days = [];
     for(let i = 1; i <= limit; i++){
@@ -13,4 +14,33 @@ function createDays( limit = xmas){
     return days;
 }
 
-const days =createDays(xmas);
+const days = createDays(xmas);
+
+const calendar = document.querySelector('.calendar');
+const fragment = new DocumentFragment();
+
+for (let i = 0; i < days.length; i++) {
+    const li = document.createElement('li');
+    const button = document.createElement('button');
+    const randomVariantClass = 'variant-' + (Math.floor(Math.random() * 3) + 1);
+    button.type = 'button';
+    button.classList.add('calendar-page', randomVariantClass);
+    li.append(button);
+
+    const shine = document.createElement('span');
+    shine.classList.add('shine');
+    button.append(shine);
+
+    const day = document.createElement('span');
+    day.classList.add('day');
+    day.innerText = days[i];
+    button.append(day);
+
+    const pins = document.createElement('span');
+    pins.classList.add('pins');
+    button.append(pins);
+
+    fragment.append(li);
+}
+
+calendar.append(fragment);
