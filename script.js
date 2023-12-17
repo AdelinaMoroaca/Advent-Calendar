@@ -11,6 +11,12 @@ function createDays( limit = xmas){
     for(let i = 1; i <= limit; i++){
         days.push(i);
     }
+
+    for(let i = days.length - 1; i > 0; i-- ){
+        const j = Math.floor(Math.random() * (i + 1));
+
+        [days[i],days[j]] = [days[j], days[i]];
+    }
     return days;
 }
 
