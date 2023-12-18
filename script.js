@@ -1,7 +1,7 @@
 const date = new Date();
 const xmas = 25;
 const today = date.getDate();
-
+const messageParagraph = document.querySelector('.message');
 const dayBadge = document.querySelector('.header .badge');
 dayBadge.innerText = today;
 

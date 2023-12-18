@@ -248,3 +248,10 @@ body {
 .calendar .calendar-page.done .day {
     opacity: 0;
 }
+
+.content .message {
+    color: var(--white);
+    font-size: 18px;
+    margin-top:32px;
+    text-align: center;
+}
