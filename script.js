@@ -33,6 +33,18 @@ for (let i = 0; i < days.length; i++) {
     button.classList.add('calendar-page', randomVariantClass);
     li.append(button);
 
+    if( today > days[i]) {
+        button.classList.add('done');
+    }
+
+    if(today === days[i]){
+        button.addEventListener('click', function(){
+            const daysLeft = xmas - today;
+            let message = `Mai sunt ${daysLeft} zile pana la Craciun`;
+            messageParagraph.innerText = message;
+        })
+    }
+
     const shine = document.createElement('span');
     shine.classList.add('shine');
     button.append(shine);
