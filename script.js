@@ -41,6 +41,10 @@ for (let i = 0; i < days.length; i++) {
         button.addEventListener('click', function(){
             const daysLeft = xmas - today;
             let message = `Mai sunt ${daysLeft} zile pana la Craciun`;
+
+            if(daysLeft === 1){
+                message = `Mai este o zi pana la Craciun!`
+            }
             messageParagraph.innerText = message;
         })
     }
