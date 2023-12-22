@@ -21,6 +21,9 @@ function createDays( limit = xmas){
 }
 
 const days = createDays(xmas);
+if(today > xmas) {
+    messageParagraph.innerText = 'Ne vedem la anul!';
+}
 
 const calendar = document.querySelector('.calendar');
 const fragment = new DocumentFragment();
@@ -44,6 +47,10 @@ for (let i = 0; i < days.length; i++) {
 
             if(daysLeft === 1){
                 message = `Mai este o zi pana la Craciun!`
+            }
+
+            if(daysLeft === 0){
+                message = `Craciun!`
             }
             messageParagraph.innerText = message;
         })
